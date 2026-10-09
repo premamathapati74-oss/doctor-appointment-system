@@ -1,0 +1,69 @@
+.hero{background:linear-gradient(135deg,#e2f1f0,#a6d3c6 55%,#3f9a8c);padding:36px 0}
+.hero-in{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.hero h1{font-size:clamp(28px,4.4vw,50px);color:var(--t);margin:0 0 18px;line-height:1.15}
+.hero ul{list-style:none;padding:0;margin:0;font-size:18px;line-height:2}
+.bookcard{background:#fff;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 30px #0b5f5f33}
+.bookcard h2{color:var(--t);margin:0 0 4px;font-size:22px}
+.sec{padding:30px 16px}.sec h2{color:var(--t2);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.hcard{text-align:left;background:#fff;border:1px solid #d5e8e8;border-radius:14px;padding:16px;cursor:pointer;box-shadow:0 4px 14px #0f7b7b1a;font-family:inherit;color:inherit}
+.hcard h3{margin:0 0 6px;color:var(--t2);font-size:17px}.hcard p{margin:4px 0}
+.hcard.on{border:2px solid var(--t);background:var(--tl)}
+.dcard{background:#fff;border:1px solid #e1eeee;border-radius:14px;padding:16px;box-shadow:0 4px 16px #0f7b7b22;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.dcard h3,.dcard p{margin:0}.dcard img,.av{width:90px;height:90px;border-radius:50%;object-fit:cover}
+.av{background:linear-gradient(135deg,#7fc9c0,#0f7b7b);color:#fff;display:grid;place-items:center;font-size:28px;font-weight:700}
+.badge{padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600}
+.badge.ok{background:#e0f5ec;color:#1f9d6b}.badge.no{background:#fbe6e5;color:#d9534f}
+@media(max-width:800px){.hero-in{grid-template-columns:1fr}.hero ul{font-size:16px}}
+
+@keyframes home-enter {
+  from { opacity: 0; transform: translateY(14px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+
+.hero-in > :first-child {
+  animation: home-enter 600ms ease-out both;
+}
+
+.hero-in > :last-child {
+  animation: home-enter 600ms 120ms ease-out both;
+}
+
+.sec > h2 {
+  animation: home-enter 500ms ease-out both;
+}
+
+.grid > * {
+  animation: home-enter 500ms ease-out both;
+}
+
+.grid > :nth-child(2) { animation-delay: 70ms }
+.grid > :nth-child(3) { animation-delay: 140ms }
+.grid > :nth-child(4) { animation-delay: 210ms }
+.grid > :nth-child(5) { animation-delay: 280ms }
+.grid > :nth-child(6) { animation-delay: 350ms }
+
+.hcard,
+.dcard {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hcard:hover,
+.dcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px #0f7b7b2e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-in > :first-child,
+  .hero-in > :last-child,
+  .sec > h2,
+  .grid > * {
+    animation: none;
+  }
+
+  .hcard,
+  .dcard {
+    transition: none;
+  }
+}

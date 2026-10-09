@@ -1,0 +1,12 @@
+.box{background:#fff;border:1px solid #d5e8e8;border-radius:14px;padding:18px;box-shadow:0 4px 14px #0f7b7b1a;display:flex;flex-direction:column;gap:10px}
+.box h2,.box h3,.box p,.box ul{margin:0}.box ul{padding-left:20px;line-height:1.8}
+.box.sel{border:2px solid var(--t);background:var(--tl)}
+.narrow{max-width:520px}
+.box a.btn{text-align:center;text-decoration:none;display:block}
+textarea{padding:11px;border:1px solid #b8d6d6;border-radius:8px;font-size:15px;width:100%;font-family:inherit}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{padding:9px 16px;border-radius:20px;background:var(--tl);color:var(--t2);font-weight:600}
+.tab.on{background:var(--t);color:#fff}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.slot{padding:9px 0;border:0;border-radius:8px;background:var(--tl);color:var(--t);cursor:pointer;font-weight:600}
+.slot.on{background:var(--t);color:#fff}.slot:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
